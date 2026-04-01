@@ -83,9 +83,20 @@ export default function ResultDashboard({ result, onReset }) {
             <div className="divider" style={{ margin: '12px 0' }}></div>
 
             <div className="supplement-tags" style={{ marginBottom: '12px' }}>
-              {combo.items.map((sup, sIdx) => (
-                <span key={sIdx} className="tag">{sup}</span>
-              ))}
+              {combo.items.map((sup, sIdx) => {
+                const name = typeof sup === 'string' ? sup : sup.name;
+                const provides = typeof sup === 'string' ? '' : sup.provides;
+                return (
+                  <span 
+                    key={sIdx} 
+                    className="tag" 
+                    title={provides || "상세 성분 정보 없음"}
+                    style={{ cursor: provides ? 'help' : 'default' }}
+                  >
+                    {name}
+                  </span>
+                );
+              })}
             </div>
 
             {/* 영양소 섭취 게이지 UI */}
