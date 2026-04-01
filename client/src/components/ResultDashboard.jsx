@@ -142,6 +142,15 @@ export default function ResultDashboard({ result, onReset, onBack }) {
               <strong>📝 복용 가이드: </strong> {combo.intakeGuide}
             </div>
 
+            {combo.lackingNutrients && (
+              <div className="lacking-box mt-3" style={{ background: 'rgba(59, 130, 246, 0.05)', border: '1px solid rgba(59, 130, 246, 0.2)', padding: '10px', borderRadius: '8px', fontSize: '0.85rem', color: 'var(--primary)', display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                <span className="icon">💡</span>
+                <div style={{ textAlign: 'left', lineHeight: '1.5' }}>
+                  <strong>부족한 영양소: </strong> {combo.lackingNutrients}
+                </div>
+              </div>
+            )}
+
             {combo.warnings && combo.warnings.length > 0 && (
               <div className="warning-box mt-3" style={{ alignItems: 'flex-start' }}>
                 <span className="icon">⚠️</span>
