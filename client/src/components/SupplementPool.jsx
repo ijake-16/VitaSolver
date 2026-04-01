@@ -36,6 +36,7 @@ export default function SupplementPool({ pool, setPool }) {
   };
 
   const presets = [
+    { id: 'p0', name: 'Vitamin B (1)', url: 'https://www.yakssamall.com/1683673684/?idx=1138' },
     { id: 'p1', name: 'Vitamin D (1)', url: 'https://www.yakssamall.com/31/?idx=1195' },
     { id: 'p2', name: 'Vitamin D (2)', url: 'https://www.yakssamall.com/31/?idx=1380' },
     { id: 'p3', name: 'Vitamin D (3)', url: 'https://www.yakssamall.com/31/?idx=1475' },

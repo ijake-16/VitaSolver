@@ -81,7 +81,7 @@ function App() {
         );
       case 3:
         return (
-          <ResultDashboard result={aiResult} onReset={resetApp} />
+          <ResultDashboard result={aiResult} onReset={resetApp} onBack={prevStep} />
         );
       default:
         return null;
