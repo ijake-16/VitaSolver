@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function SupplementPool({ pool, setPool }) {
-  const [url, setUrl] = useState('https://www.yakssamall.com/31/?idx=1134');
+  const [url, setUrl] = useState('https://www.yakssamall.com/996/?idx=1438');
   const [isLoading, setIsLoading] = useState(false);
 
 
@@ -36,11 +36,15 @@ export default function SupplementPool({ pool, setPool }) {
   };
 
   const presets = [
-    { id: 'p1', name: 'Vitamin D (1)', url: 'https://www.yakssamall.com/31/?idx=1134' },
-    { id: 'p2', name: 'Vitamin D (2)', url: 'https://www.yakssamall.com/31/?idx=1130' },
-    { id: 'p3', name: 'Multivitamin (1)', url: 'https://www.yakssamall.com/291/?idx=1207' },
-    { id: 'p4', name: 'Magnesium (1)', url: 'https://www.yakssamall.com/37/?idx=1228' },
-    { id: 'p5', name: 'Magnesium (2)', url: 'https://www.yakssamall.com/37/?idx=1197' },
+    { id: 'p1', name: 'Vitamin D (1)', url: 'https://www.yakssamall.com/31/?idx=1195' },
+    { id: 'p2', name: 'Vitamin D (2)', url: 'https://www.yakssamall.com/31/?idx=1380' },
+    { id: 'p3', name: 'Vitamin D (3)', url: 'https://www.yakssamall.com/31/?idx=1475' },
+    { id: 'p4', name: 'Multivitamin (1)', url: 'https://www.yakssamall.com/291/?idx=1207' },
+    { id: 'p5', name: 'Multivitamin (2)', url: 'https://www.yakssamall.com/291/?idx=1450' },
+    { id: 'p6', name: 'Magnesium (1)', url: 'https://www.yakssamall.com/37/?idx=1228' },
+    { id: 'p7', name: 'Magnesium (2)', url: 'https://www.yakssamall.com/37/?idx=1197' },
+    { id: 'p8', name: 'Zinc (1)', url: 'https://www.yakssamall.com/316/?idx=1147' },
+    { id: 'p9', name: 'Calcium (2)', url: 'https://www.yakssamall.com/322/?idx=1318' },
   ];
 
   return (
