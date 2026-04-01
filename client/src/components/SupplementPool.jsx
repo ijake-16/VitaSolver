@@ -15,7 +15,7 @@ export default function SupplementPool({ pool, setPool }) {
     if (!url) return;
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/recommend-live?url=${encodeURIComponent(url)}`);
+      const response = await fetch(`https://vitasolver-production.up.railway.app/api/recommend-live?url=${encodeURIComponent(url)}`);
       const data = await response.json();
       if (data.success && data.data) {
         setPool([...pool, {
