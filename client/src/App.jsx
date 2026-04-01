@@ -24,11 +24,25 @@ function App() {
 
   const startAnalysis = async () => {
     setIsSolving(true);
-    // Mock network request delay
-    await new Promise(res => setTimeout(res, 1500));
-    setAiResult({ success: true, dummy: true }); // Real implementation will fetch from backend
-    setIsSolving(false);
-    nextStep();
+    try {
+      const response = await fetch('http://localhost:5000/api/solve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mode: 'auto_combination', familyProfiles, supplementsPool })
+      });
+      const data = await response.json();
+      if (data.success && data.data) {
+        setAiResult(data.data);
+        nextStep();
+      } else {
+        alert(data.message || 'AI 분석 실패');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('서버 오류 발생');
+    } finally {
+      setIsSolving(false);
+    }
   };
 
   // 3. 렌더링 함수
