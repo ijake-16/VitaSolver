@@ -1,7 +1,7 @@
 # 💊 VitaSolver (비타솔버)
 **가족 단위 맞춤형 영양제 오케스트레이션 및 과다 섭취 방지 AI 플랫폼 (MVP)**
 
-(리뷰 버전 배포)ttps://vita-solver.vercel.app/]
+[리뷰 버전 배포](https://vita-solver.vercel.app/)
 
 ## 법적 고지 및 주의사항 
 
